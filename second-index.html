@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colour Changer</title>
+</head>
+<body>
+    <h1 id="colorName">Click a button to change the color</h1>
+
+    <button id="blueBtn">Blue</button>
+    <button id="redBtn">Red</button>
+    <button id="greenBtn">Green</button>
+
+    <script>
+        console.log("This page changes colour");
+
+        function changeColor(color) {
+
+            document.body.style.backgroundColor = color;
+            
+            document.getElementById('colorName').textContent = color;
+
+            console.log(color);
+        }
+
+        document.getElementById('blueBtn').addEventListener('click', function() {changeColor('Blue')});
+        document.getElementById('redBtn').addEventListener('click', function() {changeColor('Red')});
+        document.getElementById('greenBtn').addEventListener('click', function() {changeColor('Green')});
+    </script>
+</body>
+</html>
